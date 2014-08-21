@@ -1,8 +1,10 @@
 
 /* ######### defining general things ############## */
+
 html,body {
   margin: 0;
   padding:0;
+  color: #fff;
 }
 
  .height100 {
@@ -13,22 +15,6 @@ body {
   font-family:sans-serif;
   font-size:10pt;
   min-width:1024px;
-}
-
-header {
-  height:750px;
-  background: url(../img/HeaderBG.jpg)no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.borderRadius5,
-#musicList > p > a:first-child  {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
 }
 
 .testOutline {
@@ -45,83 +31,108 @@ a:hover {
   text-decoration: underline;
 }
 
+.wrapper {
+  width:944px;
+  margin:auto;
+}
+
+.background1 {
+  background: #1a1a1a; 
+}
+
+.background2 {
+  background: #010101;
+}
+
+.bottom {vertical-align: bottom;
+}
+
+.yellow {
+    color:#fff30f;
+    text-outline: #fffaa0;
+}
+
+.pink {
+    color:#e40152;
+}
+
+.blue {
+    color:#009f95;
+}
+
 /* ######### defining general things ############## */
 /* ###### navigation ####### */
 
-/*.heightOverNav {
-  height:5px;
-}*/
-
 .socialMediaNav {
   overflow: hidden;
-  padding:0.5em 0em;
-
 }
+
 .socialMediaNav nav ul {
   color: #fff;
   list-style: none;
   margin:0em 3em; /*Abstand zu links*/
-  width:500px;
-  /*overflow: auto;*/
-    
-}
-.socialMediaNav nav ul li{
-  float: left;
-  margin: 0px 5px;
-  font-size:1em;
-  padding:2px 0;    
+  width:500px;  
 }
 
-.mainNavigation nav {
-  margin: 20px 0 0 2em;
-  /*overflow: auto;*/
-  /*width:500px;*/
-}
-.mainNavigation nav ul {
-  margin: 0;
-  /*overflow: auto;*/
-}
-.mainNavigation nav ul li {
-  /*font-family: cursive;*/
+.socialMediaNav nav ul li{
   float: left;
-  margin: 0 5px;
-  width: 120px;
-  /*height:60px;*/
-  font-size:2.8em;          
-  padding: 15px 10px;
-  border: 1px solid #414141;
-  /*color:#fff;*/
-  text-align: center;
-  vertical-align: middle;
-  list-style: none;
+  font-size:1em;
+  display: block;    
 }
-.mainNavigation nav ul li {
-  font-family: bulletproofnoquotes;
+.socialMediaNav nav ul li:first-child {
+  padding: 5px;
+}
+
+.socialMediaNav nav ul li a {
+  padding: 5px;
+  display: block;
+}
+
+.socialMediaNav nav ul li a:hover{
+  background: #1a1a1a;
 }
 
 /* ###### navigation end ####### */
+/* ###### header end ####### */
 
-/* ###### music box start ####### */
-
-.currentlyListenTo {
-  width: 100%;
-/*  margin: auto;*/
-  /*height:100px;*/
-  /*float:right;*/
+header {
+  height: 440px;
+  background: url(../img/HeaderBG.jpg)no-repeat 0 -60px fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+header > p {
+font-family: 'Sansita One', cursive;
+ font-size: 5em;
+ float: left;
+ margin: 4em 3em 0 3em;
+ text-shadow:
+0 2px 0 #333,
+0 -2px 0 #333,
+2px 0 0 #333,
+-2px 0 0 #333;
+}
+
+/* ###### header end ####### */
 /* ###### music box end ####### */
+
 div#musicPlayer {
   padding:5px;
   height:60px;
 }
+
 div#musicPlayer > div/*, div#musicPlayer > canvas*/ {
   margin: auto;
   width:450px;
 }
+
 div#musicPlayer > div > audio {
   /*width:450px;*/
 }
+
 div#musicPlayer > div#analiserRender, div#musicPlayer > canvas {
   width:450px;
   height:30px;
@@ -135,73 +146,66 @@ div#musicPlayer >  div#analiserRender {
  text-align: center;
  padding-top: 5px;
 }
+
 #audioPlayer {
   height:28px;
 }
 
 /* ###### section start ####### */
-
-.wrapper{
-  width:944px;
-  margin:auto;
-  padding: 2px;
-  /*overflow: auto;*/
- 
-}
-
-.main {
-  /*overflow: auto;*/
-  display: block;
-  margin: 0 0px 0 0px;
-  width:744px;
-  float:left;
-}
-
 /* ###### marginal column ######*/
 
 .links {
   width:200px;
   float:left;
   height:100%;
-  /*overflow: auto;*/
-  margin-bottom:10px;
+  margin: 10px 0 0 0;
 }
 
 #musicList {
-  border: 1px solid #fde3ed;
   padding:5px;
   cursor: pointer;
 }
-#musicList > p > a:nth-child(2n) {
+
+/*#musicList > p > a:nth-child(2n) {
   width:160px;
+}*/
+
+#musicList > p > a:first-child {
+  color:#fff;
+  background: #010101;
+  cursor: pointer;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  margin: 0 4px 2px 0px;
+  padding: 6px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height:0.8em;
 }
+
 .hiddenDelete {
-  background-color: #eaeaea;
-  cursor: pointer;
-  color:#fff;
-  margin:0 4px 2px 4px;
-  padding:0 4px 2px 4px;
   visibility: hidden;
-  font-family: monospace;
 }
+
 .visibleDelete {
-  background-color: #eaeaea;
-  cursor: pointer;
-  color:#fff;
-  margin:0 4px 2px 4px;
-  padding:0 4px 2px 4px;
   visibility: visible;
-  font-family: monospace;
 }
+
+.hiddenDelete:hover, .visibleDelete:hover {
+  text-decoration: none;
+}  
 
 .search {
   padding:3px;
-  font-family: Georgia;
   line-height: 1;
-  width:96%;
-  border: 1px solid #f3f3f3;
-  margin-bottom:5px;
+  width: 100%;
+  margin-bottom: 10px;
 }
+
 #jQueryResults {
   margin: 0 15px;
   background-color: #e3e3e3;
@@ -209,23 +213,34 @@ div#musicPlayer >  div#analiserRender {
 }
 
 /* ###### marginal column end ######*/
+/* ###### music box start ####### */
+
+.currentlyListenTo {
+  width: 100%;
+}
+
+/* ###### music box end ####### */
+
+.main {
+  display: block;
+  margin: 0 0px 0 0px;
+  width:744px;
+  float:left;
+}
 
 /* ###### section end ####### */
-
-
 /* ###### band start ####### */
+
 .bandDiv {
   width:350px;
-  /*height:220px;*/
   float:left;
   background: #010101;
   border: #000 solid 1px;
   border: #020202 solid 1px;
-  /*overflow: auto;*/
   margin: 0px 0px 1px 0px;
   padding: 10px;
-  /*border: 1px solid silver;*/
 }
+
 .bandDiv:hover{
   background: #1a1a1a;
 }
@@ -233,6 +248,7 @@ div#musicPlayer >  div#analiserRender {
 .bandDiv p {
   margin: 0px;
 }
+
 .bandDiv > a {
   cursor: pointer;
   display:block;
@@ -256,6 +272,7 @@ div#musicPlayer >  div#analiserRender {
   border:2px solid #f3f3f3;
   background-color: white;
 }
+
 .bandHeadline {
   margin: 0px;
   font-weight: bolder;
@@ -263,50 +280,21 @@ div#musicPlayer >  div#analiserRender {
 }
 
 /* ###### band end ####### */
-
 /* ###### footer start ####### */
+
 footer {
   padding:10px;
-  /*height:200px;*/
   height:100%;
   min-height: 45  0px; 
   margin-top: 20px;
   margin-bottom:0;
-  /*overflow: auto;*/
 }
+
 /* ###### footer end ####### */
+/* ###### clearfixes start ####### */
 
-.background1 {
-  background: #1a1a1a; /* Old browsers */
-  /*background: -moz-linear-gradient(top,  #5b5b5b 0%, #191919 100%);*/ /* FF3.6+ */
-  /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5b5b5b), color-stop(100%,#191919));*/ /* Chrome,Safari4+ */
-  /*background: -webkit-linear-gradient(top,  #5b5b5b 0%,#191919 100%);*/ /* Chrome10+,Safari5.1+ */
-  /*background: -o-linear-gradient(top,  #5b5b5b 0%,#191919 100%);*/ /* Opera 11.10+ */
-  /*background: -ms-linear-gradient(top,  #5b5b5b 0%,#191919 100%);*/ /* IE10+ */
-  /*background: linear-gradient(to bottom,  #5b5b5b 0%,#191919 100%);*/ /* W3C */
-  /*filter:     progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5b5b', endColorstr='#191919',GradientType=0 );*/ /* IE6-9 */
-}
-.background2 {
-  background: #010101;
-}
-
-.bottom {vertical-align: bottom;
-}
-
-.yellow {
-    color:#fff30f;
-    text-outline: #fffaa0;
-}
-.pink {
-    color:#e40152;
-}
-.blue {
-    color:#009f95;
-}
-
-/*cleafixes*/
 .clearfix:after,
-.socialMediaNav /*nav*/ ul li:after,
+.socialMediaNav nav ul li:after,
 .currentlyListenTo:after,
 .links:after,
 .bandDiv:after,
@@ -320,8 +308,9 @@ footer {
   clear: both;
   visibility: hidden;
 }
+
 .clearfix,
-.socialMediaNav /*nav*/ ul li,
+.socialMediaNav nav ul li,
 .currentlyListenTo,
 .links,
 .bandDiv,
@@ -335,3 +324,5 @@ footer {
 .clear {
   clear:both;
 }
+
+/* ###### clearfixes end ####### */

@@ -32,6 +32,8 @@
 
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
   
   <script type="text/javascript" src="js/javascript.js"></script> 
   <script src="audiojs/audio.min.js"></script> <!-- style music player-->
@@ -58,10 +60,11 @@
 
 </head>
 <body onload="getAllBands();" class="background2">
-    <div class="socialMediaNav background1 wrapper">
+    <div class="socialMediaNav wrapper">
         <nav class="outline">
           <ul class="">
-            <li><a class="" href="https://github.com/LintuSotaRauha">Github</a></li>
+            <li>Me, elsewhere:</li>
+            <li><a class="" href="https://github.com/BirgitPohl">Github</a></li>
             <li><a class="" href="http://www.behance.net/birgitpohl">Portfolio</a></li>
             <li><a class="" href="http://birgit-pohl.tumblr.com">Blog</a></li>
             <li><a class="" href="https://www.facebook.com/GraphicBirgitPohl">Facebook</a></li>
@@ -72,9 +75,10 @@
        </nav>
     </div>
     <header class="">
+      <p>Music Play List</p>
     </header>
     <div class="clear"></div>
-    <div class="wrapper">
+    <section class="wrapper">
       <!-- music box -->
           <div id="musicPlayer" class="currentlyListenTo">
             <canvas id="analiserRender">
@@ -83,12 +87,12 @@
             </div>
           </div>
       <!-- music box end -->
-    </div>
+    </section>
     <div class="clear"></div>
     <section class="wrapper">
       <div class="links ui-widget">
          <input type="text" onblur="getSearch()" onmouseup="getSearch()" result="5" placeholder="search" class="search"  id="searchField">
-        <div id="musicList" class="">
+        <div id="musicList" class="background1">
             Create your own playlist!
         </div>
       </div>
@@ -99,12 +103,14 @@
 
     </section>
     <footer class="background2 wrapper socialMediaNav">
-      <ul><li>The artists:</li>
-        <li><a href="http://www.springtide.jp/index.html?FMA">Springtide</a></li>
-        <li>|</li>
-        <li><a href="http://freemusicarchive.org/music/THERE/none_given_1514/">THERE.</a></li>
-        <li>|</li>
-      </ul>
+      <nav>  
+        <ul><li>The Artists:</li>
+          <li><a href="http://www.springtide.jp/index.html?FMA">Springtide</a></li>
+          <li>|</li>
+          <li><a href="http://freemusicarchive.org/music/THERE/none_given_1514/">THERE.</a></li>
+          <li>|</li>
+        </ul>
+      </nav>
     </footer>
     
 </body>
