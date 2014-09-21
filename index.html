@@ -31,15 +31,19 @@
 
 
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/musicplayer.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
-  
-  <script type="text/javascript" src="js/javascript.js"></script> 
-  <script src="audiojs/audio.min.js"></script> <!-- style music player-->
 
   <script src="js/jquery-1.9.1.js"></script> <!-- autocomplete in search field -->
   <script src="js/jquery-ui.js"></script><!-- autocomplete style in search field -->
+
+
+  <script src="js/musicplayer.js"></script> <!-- style music player-->
+  <script type="text/javascript" src="js/javascript.js"></script> 
+
+
 
 
   <script>
@@ -52,9 +56,9 @@
       })
     });
 
-    audiojs.events.ready(function() {
-      var as = audiojs.createAll();
-    });
+    // audiojs.events.ready(function() {
+    //   var as = audiojs.createAll();
+    // });
 
   </script>
 
@@ -109,6 +113,7 @@
           <li>|</li>
           <li><a href="http://freemusicarchive.org/music/THERE/none_given_1514/">THERE.</a></li>
           <li>|</li>
+          <li><a href="http://www.reverbnation.com/littletaek">Taeko O'shima</a></li>
         </ul>
       </nav>
     </footer>
