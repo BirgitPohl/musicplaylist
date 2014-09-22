@@ -70,11 +70,7 @@ a:hover {
 .socialMediaNav nav ul {
   color: #fff;
   list-style: none;
-<<<<<<< HEAD
-  margin:0em 3em; /*Abstand zu links*/
-=======
   margin:0em auto; /*Abstand zu links*/
->>>>>>> master
   width:500px;  
 }
 
