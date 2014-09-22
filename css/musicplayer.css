@@ -1,0 +1,78 @@
+	#player {
+	width:435px;
+	height:40px;
+	border-radius:10px;
+	background:#221111;
+	box-shadow:0px 0px 8px #221111;
+	margin:20px;
+	}
+	#playbutton {
+	width:30px;
+	height:30px;
+	float:left;
+	margin:5px 5px 5px 15px;
+	cursor:pointer;
+	}
+	#infofenster {
+	width:220px;
+	height:25px;
+	float:left;
+	margin:7.5px 5px 7.5px 10px;
+	border-radius:2px;
+	background:#c9c3c3;
+	}
+	#infofenster marquee {
+	width:200px;
+	height:20px;
+	margin:3px 10px 2px 10px;
+	}
+	#time {
+	width:70px;
+	height:20px;
+	float:left;
+	margin:15px 5px 5px 5px;
+	color:#c9c3c3;
+	font-weight:bold;
+	}
+	#ton {
+	width:38px;
+	height:25px;
+	float:left;
+	margin:7.5px 0px 7.5px 15px;
+	cursor:pointer;
+	}
+	#vol1 {
+	width:5px;
+	height:8px;
+	float:left;
+	margin:17px 1px 0px 1px;
+	background:#c9c3c3;
+	}
+	#vol2 {
+	width:5px;
+	height:12px;
+	float:left;
+	margin:13px 1px 0px 1px;
+	background:#c9c3c3;
+	}
+	#vol3 {
+	width:5px;
+	height:16px;
+	float:left;
+	margin:9px 1px 0px 1px;
+	background:#c9c3c3;
+	}
+	#vol4 {
+	width:5px;
+	height:20px;
+	float:left;
+	margin:5px 1px 0px 1px;
+	background:#8d8585;
+	}
+	#vol5 {
+	width:5px;
+	height:24px;
+	float:left;
+	margin:1px 1px 0px 1px;
+	background:#8d8585;
+	}

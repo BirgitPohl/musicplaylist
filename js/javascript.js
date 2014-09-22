@@ -16,13 +16,22 @@ var x = 1;
 /*_________________________________________________________________________*/
 
 //first sorts the arrays so that you are able to push anything but gives the result in alphabetic order with function "getAllBands"
+<<<<<<< HEAD
 bands.sort();
 bandPictures.sort();
+=======
+// bands.sort();
+// bandPictures.sort();
+>>>>>>> master
 
 /* ######## music box ########### */
 /* ####### Creating a frequency analyser: ###### */
 audio.src = 'music/Springtide_01_Distant-thunder-Sunday-morning.mp3'; //note: Firefox interprets MP3 from version 21. (Most updated is 25)
+<<<<<<< HEAD
 audio.controls = true;
+=======
+audio.controls = false;
+>>>>>>> master
 audio.loop = false;
 audio.autoplay = false;
 audio.id = "audioPlayer"
@@ -41,6 +50,18 @@ function getAllBands(){
 }
 /* ######### onLoad event end ############*/
 
+<<<<<<< HEAD
+=======
+/* ######### get Band Name ###########*/
+
+function getBandName(link) {
+	return bands[bandPictures.indexOf(link)];
+	//gives the position of bandPictures putting it into bands[bandName] to get the band's name
+}
+
+/* ######### get Band Name end ###########*/
+
+>>>>>>> master
 /* ############# Search ############### */
 /*Searches for a specific artist and gives it back*/
 function getSearch() {
@@ -58,8 +79,14 @@ function getSearch() {
 /* ############# Search end ############### */
 
 /* ########### Playlist #############*/
+<<<<<<< HEAD
 function addToPlaylist(track) {
 	var bandName = bands[bandPictures.indexOf(track)]; //gives the position of bandPictures putting it into bands[bandName] to get the band's name
+=======
+function addToPlaylist(link) {
+	//var bandName = bands[bandPictures.indexOf(link)]; //gives the position of bandPictures putting it into bands[bandName] to get the band's name
+	var bandName = getBandName(link);
+>>>>>>> master
 	//cutting strings that are to long
 	if(bandName.length > 17) {
 		bandName = bandName.slice(0, 17);
@@ -68,7 +95,11 @@ function addToPlaylist(track) {
 
 	var newPosition = playlist.length;
 	//creates the next list Object
+<<<<<<< HEAD
 	var playlistObject = "<p onmouseover=\"makeDeleteVisible(" + newPosition + ")\" onmouseout=\"makeDeleteHidden(" + newPosition + ")\" id=\"" + newPosition + "deletePosition\"><a class=\"hiddenDelete\" onclick=\"deleteFromPlaylist(" + newPosition + ")\" id=\"" + newPosition + "delete\">x</a><a data-songSource=\"" + track + "\"onclick=\"changeMusicFromList(" + newPosition + ", \'" + track + "\')\" id=\"" + newPosition + "playlistPosition\">" + bandName + "</a></p>";
+=======
+	var playlistObject = "<p onmouseover=\"makeDeleteVisible(" + newPosition + ")\" onmouseout=\"makeDeleteHidden(" + newPosition + ")\" id=\"" + newPosition + "deletePosition\"><a class=\"hiddenDelete\" onclick=\"deleteFromPlaylist(" + newPosition + ")\" id=\"" + newPosition + "delete\">x</a><a data-songSource=\"" + link + "\"onclick=\"changeMusicFromList(" + newPosition + ", \'" + link + "\')\" id=\"" + newPosition + "playlistPosition\">" + bandName + "</a></p>";
+>>>>>>> master
 
 	playlist.push(newPosition); //stores the number which represents the length of the playlist array
 	document.getElementById('musicList').innerHTML += playlistObject;
@@ -104,7 +135,15 @@ function deleteFromPlaylist(playlistPosition) {
 //changes music, puts music into the player over variable audio
 function changeMusic(link) {
 	audio.src = 'music/' + link + '.mp3';
+<<<<<<< HEAD
 	audio.autoplay = true;
+=======
+	document.getElementById('infofenster').innerHTML = "<marquee behavior=\"alternate\" scrolldelay=\"300\">" + getBandName(link) + "</marquee>"
+	audio.autoplay = true;
+	// play_control = 0;
+	playmusic();
+	makeAllDefault();
+>>>>>>> master
 }
 //If you click on a specitic position in the Playlist
 function changeMusicFromList(playlistPosition, track) {
@@ -113,7 +152,13 @@ function changeMusicFromList(playlistPosition, track) {
  	//audio.src = 'music/' + bandPictures[change] + '.mp3';
  	audio.src = 'music/' + track + '.mp3';
 	audio.autoplay = true;
+<<<<<<< HEAD
 	
+=======
+	// play_control = 0;
+	playmusic();
+
+>>>>>>> master
 	//Visual Feedback for currently played song
 	
 	makeAllDefault();
@@ -201,7 +246,14 @@ function checkBrowser(BrowserName) {
 window.addEventListener("load", initMp3Player, false);
 
 function initMp3Player() {
+<<<<<<< HEAD
 	document.getElementById('musicBox').appendChild(audio); //add an Audio tag to musicBox
+=======
+	//document.getElementById('musicBox').appendChild(audio); //add an Audio tag to musicBox
+	document.getElementById('musicBox').innerHTML += "<div id=\"player\"><div id=\"playbutton\"><img onclick=\"playmusic()\" id=\"playbutt\" src=\"play.jpg\"></div><div id=\"infofenster\"><marquee behavior=\"alternate\" scrolldelay=\"300\">Orchester Power No.1 - fricke music</marquee></div><div id=\"time\">00:00/00:00</div><div id=\"ton\"><div onclick=\"vol(\'1\')\" id=\"vol1\"></div><div onclick=\"vol(\'2\')\" id=\"vol2\"></div><div onclick=\"vol(\'3\')\" id=\"vol3\"></div><div onclick=\"vol(\'4\')\" id=\"vol4\"></div><div onclick=\"vol(\'5\')\" id=\"vol5\"></div></div></div>";
+	audio.volume = 0.6;
+
+>>>>>>> master
 	if (checkBrowser("chrome")) {
 		context = new webkitAudioContext(); //AudioContext object instance | webkit is the prefix so that it works in Chrome
 		analyser = context.createAnalyser(); //AnalyserNode method
