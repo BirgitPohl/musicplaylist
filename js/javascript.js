@@ -114,7 +114,7 @@ function deleteFromPlaylist(playlistPosition) {
 //changes music, puts music into the player over variable audio
 function changeMusic(link) {
 	audio.src = 'music/' + link + '.mp3';
-	document.getElementById('infofenster').innerHTML = "<marquee behavior=\"alternate\" scrolldelay=\"300\">" + getBandName(link) + "</marquee>"
+	document.getElementById('infofenster').innerHTML = "<marquee>" + getBandName(link) + "</marquee>";
 	audio.autoplay = true;
 	// play_control = 0;
 	playmusic();
@@ -206,10 +206,7 @@ function getArrayPosition() {
 // checking Browser because they use different prefixes for AudioContext
 function checkBrowser(BrowserName) {
 	var agent = navigator.userAgent.toLowerCase();
-	if (agent.indexOf( BrowserName ) > -1) {
-		return true;
-	}
-	return false;
+	return (agent.indexOf( BrowserName ) > -1);
 }
 
 /* ############ Creating a frequence analizer ######### */
@@ -218,7 +215,7 @@ window.addEventListener("load", initMp3Player, false);
 
 function initMp3Player() {
 	//document.getElementById('musicBox').appendChild(audio); //add an Audio tag to musicBox
-	document.getElementById('musicBox').innerHTML += "<div id=\"player\"><div id=\"playbutton\"><img onclick=\"playmusic()\" id=\"playbutt\" src=\"play.jpg\"></div><div id=\"infofenster\"><marquee behavior=\"alternate\" scrolldelay=\"300\">Orchester Power No.1 - fricke music</marquee></div><div id=\"time\">00:00/00:00</div><div id=\"ton\"><div onclick=\"vol(\'1\')\" id=\"vol1\"></div><div onclick=\"vol(\'2\')\" id=\"vol2\"></div><div onclick=\"vol(\'3\')\" id=\"vol3\"></div><div onclick=\"vol(\'4\')\" id=\"vol4\"></div><div onclick=\"vol(\'5\')\" id=\"vol5\"></div></div></div>";
+	document.getElementById('musicBox').innerHTML += "<div id=\"player\"><div id=\"playbutton\"><img onclick=\"playmusic()\" id=\"playbutt\" src=\"play.jpg\"></div><div id=\"infofenster\"><marquee>Orchester Power No.1 - fricke music</marquee></div><div id=\"time\">00:00/00:00</div><div id=\"ton\"><div onclick=\"vol(\'1\')\" id=\"vol1\"></div><div onclick=\"vol(\'2\')\" id=\"vol2\"></div><div onclick=\"vol(\'3\')\" id=\"vol3\"></div><div onclick=\"vol(\'4\')\" id=\"vol4\"></div><div onclick=\"vol(\'5\')\" id=\"vol5\"></div></div></div>";
 	audio.volume = 0.6;
 
 	if (checkBrowser("chrome")) {
